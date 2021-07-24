@@ -1,0 +1,157 @@
+/* 
+╔═══════════════╗
+║   UI Nav      ║
+╚═══════════════╝
+*/
+a {
+	cursor: pointer;
+}
+header {
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	font-weight: bold;
+}
+.nav-container {
+	width: 100%;
+}
+.nav-checkbox {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	padding: 10px 0;
+}
+.logo {
+	width: min-content;
+	font-size: 40px;
+	text-decoration: none;
+	color: #fff;
+	padding-left: 30px;
+}
+.tab-nav {
+	outline: none;
+	display: none;
+}
+.tab-nav-label {
+	display: none;
+	color: #fff;
+}
+.tab-content {
+	grid-column: 3;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.tab-content li {
+	display: inline-block;
+	padding-right: 10px;
+	margin: 5px;
+}
+.tab-content li a {
+	padding: 0 10px 0 10px;
+	text-decoration: none;
+	color: #fff;
+	position: relative;
+}
+/* 
+╔═════════════════════╗
+║   Hover Effect      ║
+╚═════════════════════╝
+*/
+.tab-content li a::before {
+	content: "";
+	display: block;
+	height: 3px;
+	background: #fff;
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	right: 0;
+	transform-origin: left;
+	transform: scale(0, 1);
+	transition: transform ease-in-out 500ms;
+}
+.tab-content li a:hover::before {
+	transform: scale(1, 1);
+}
+
+.tab-content li a::after {
+	content: "";
+	display: block;
+	height: 3px;
+	background: #fff;
+	position: absolute;
+	top: -5px;
+	left: 0;
+	right: 0;
+	transform-origin: right;
+	transform: scale(0, 1);
+	transition: transform ease-in-out 500ms;
+}
+.tab-content li a:hover::after {
+	transform: scale(1, 1);
+}
+
+/* 
+╔═════════════════════╗
+║   Hover Effect      ║
+╚═════════════════════╝
+*/
+
+.content {
+	height: 150vh;
+	background-image: url(https://picsum.photos/1280?image=849);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+}
+/* @media screen and (max-width: 1280px) {
+	.nav-container {
+		width: 100%;
+	}
+} */
+@media screen and (max-width: 768px) {
+	.nav-label {
+		display: grid;
+	}
+	.tab-nav-label {
+		display: grid;
+		cursor: pointer;
+		text-align: end;
+		padding-right: 30px;
+	}
+	.tab-content {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-column: 1/4;
+		text-align: center;
+		/* max-height: 0; */
+		/* 
+		overflow: hidden;
+		transition: all ease-in-out 0.4s;
+		-o-transition: all ease-in-out 0.4s;
+		-webkit-transition: all ease-in-out 0.4s; */
+	}
+	.nav-checkbox label input:checked ~ .tab-content {
+		max-height: 400px;
+	}
+	/*.tab-content li {
+		padding: 10px 0;
+	} */
+}
+/* .myvideo {
+	text-decoration: none;
+	color: #fff;
+	background: red;
+	padding: 10px;
+	height: 20px;
+	font-weight: 600;
+}
+.myvideo:hover {
+	color: #000;
+} */
