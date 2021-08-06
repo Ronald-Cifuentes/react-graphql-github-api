@@ -4,7 +4,7 @@ import { Provider } from "react-redux"
 
 import Routes from "./Routes"
 import storeInstance from "./Redux/Store"
-import "./app.css"
+import "./index.scss"
 
 ReactDom.render(
 	<StrictMode>

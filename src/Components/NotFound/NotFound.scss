@@ -1,0 +1,18 @@
+.NotFound {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-image: linear-gradient(red, violet);
+	color: white;
+}
+
+.NotFound h1 {
+	font-size: 140px;
+}
+
+.NotFound h2 {
+	font-size: 70px;
+}

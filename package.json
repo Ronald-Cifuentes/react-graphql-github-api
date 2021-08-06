@@ -7,12 +7,12 @@
 		"test": "jest --watchAll",
 		"coverage": "jest --coverage",
 		"lint": "eslint src --fix",
-		"build": "webpack --config webpack.prod.js",
+		"build": "webpack --config webpack/prod.js",
 		"prepare": "husky install",
-		"start": "webpack serve --config webpack.dev.js"
+		"start": "webpack serve --config webpack/dev.js"
 	},
 	"keywords": [],
-	"author": "",
+	"author": "Ronald Cifuentes <ronald.cifuentes2020@gmail.com>",
 	"license": "MIT",
 	"devDependencies": {
 		"@babel/core": "^7.14.6",
@@ -36,7 +36,6 @@
 		"eslint-plugin-react": "^7.24.0",
 		"html-webpack-plugin": "^5.3.2",
 		"image-minimizer-webpack-plugin": "^2.2.0",
-		"image-webpack-loader": "^7.0.1",
 		"jest": "^27.0.6",
 		"mini-css-extract-plugin": "^2.1.0",
 		"redux-devtools-extension": "^2.13.9",
@@ -54,6 +53,7 @@
 		"core-js": "^3.15.2",
 		"dotenv": "^10.0.0",
 		"dotenv-webpack": "^7.0.3",
+		"formik": "^2.2.9",
 		"husky": "^7.0.1",
 		"prettier": "^2.3.2",
 		"pretty-quick": "^3.1.1",
@@ -63,7 +63,8 @@
 		"react-router-dom": "^5.2.0",
 		"redux": "^4.1.0",
 		"redux-thunk": "^2.3.0",
-		"thunk": "^0.0.1"
-	},
-	"browserslist": "> 0.25%, not dead, not ie 11"
+		"sweetalert2": "^11.1.2",
+		"thunk": "^0.0.1",
+		"webpack-merge": "^5.8.0"
+	}
 }
